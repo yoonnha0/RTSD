@@ -23,7 +23,7 @@ except ModuleNotFoundError:
 
 import streamlit as st
 import torch
-# import detect
+import detect
 from PIL import Image
 from io import *
 import glob
