@@ -1,14 +1,3 @@
-import streamlit as st
-import torch
-# import detect
-from PIL import Image
-from io import *
-import glob
-from datetime import datetime
-import os
-import wget
-import time
-
 try:
     # Streamlit < 0.65
     from streamlit.ReportThread import get_report_ctx
@@ -31,6 +20,17 @@ except ModuleNotFoundError:
             except ModuleNotFoundError:
                 # Streamlit > ~1.12
                 from streamlit.runtime.scriptrunner.script_run_context import get_script_run_ctx as get_report_ctx
+
+import streamlit as st
+import torch
+# import detect
+from PIL import Image
+from io import *
+import glob
+from datetime import datetime
+import os
+import wget
+import time
 
 
 def imageInput(device, src):
