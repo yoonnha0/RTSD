@@ -75,7 +75,7 @@ def main():
     # -- End of Sidebar
 
     st.header('⛔Traffic road signs detection Model')
-    st.subheader('👈🏽Select the options')
+    st.subheader('⬅️ Select the options')
 #     st.sidebar.markdown("https://bit.ly/3uvYQ3R")
 
     imageInput(deviceoption, datasrc)
