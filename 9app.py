@@ -110,11 +110,11 @@ def main():
 if __name__ == '__main__':
                    main()
         
-# @st.cache
-# def loadModel():
-#     start_dl = time.time()
-#     model_file = wget.download('https://archive.org/download/best_20230412/best.pt', out="models/")
-#     finished_dl = time.time()
-#     print(f"Model Downloaded, ETA:{finished_dl-start_dl}")
-# loadModel()
+@st.cache
+def loadModel():
+    start_dl = time.time()
+    model_file = wget.download('https://archive.org/download/best_20230412/best.pt', out="models/")
+    finished_dl = time.time()
+    print(f"Model Downloaded, ETA:{finished_dl-start_dl}")
+loadModel()
     
