@@ -104,7 +104,7 @@ def main():
     st.subheader('⬅️Select the options')
 
 #     if option == "Image":    
-        imageInput(deviceoption, datasrc)
+    imageInput(deviceoption, datasrc)
 #     elif option == "Video": 
 #         videoInput(deviceoption, datasrc)
 
