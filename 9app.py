@@ -65,26 +65,26 @@ def imageInput(device, src):
                     st.image(img_, caption='Model Prediction(s)')
 
                     
-def videoInput(device, src):
-    uploaded_video = st.file_uploader("Upload Video", type=['mp4', 'mpeg', 'mov'])
-    if uploaded_video != None:
+# def videoInput(device, src):
+#     uploaded_video = st.file_uploader("Upload Video", type=['mp4', 'mpeg', 'mov'])
+#     if uploaded_video != None:
 
-        ts = datetime.timestamp(datetime.now())
-        imgpath = os.path.join('data/uploads', str(ts)+uploaded_video.name)
-        outputpath = os.path.join('data/video_output', os.path.basename(imgpath))
+#         ts = datetime.timestamp(datetime.now())
+#         imgpath = os.path.join('data/uploads', str(ts)+uploaded_video.name)
+#         outputpath = os.path.join('data/video_output', os.path.basename(imgpath))
 
-        with open(imgpath, mode='wb') as f:
-            f.write(uploaded_video.read())  # save video to disk
+#         with open(imgpath, mode='wb') as f:
+#             f.write(uploaded_video.read())  # save video to disk
 
-        st_video = open(imgpath, 'rb')
-        video_bytes = st_video.read()
-        st.video(video_bytes)
-        st.write("Uploaded Video")
-        run(weights="models/best.pt", source=imgpath, device=0) if device == 'cuda' else run(weights="models/best.pt", source=imgpath, device='cpu')
-        st_video2 = open(outputpath, 'rb')
-        video_bytes2 = st_video2.read()
-        st.video(video_bytes2)
-        st.write("Model Prediction")                    
+#         st_video = open(imgpath, 'rb')
+#         video_bytes = st_video.read()
+#         st.video(video_bytes)
+#         st.write("Uploaded Video")
+#         run(weights="models/best.pt", source=imgpath, device=0) if device == 'cuda' else run(weights="models/best.pt", source=imgpath, device='cpu')
+#         st_video2 = open(outputpath, 'rb')
+#         video_bytes2 = st_video2.read()
+#         st.video(video_bytes2)
+#         st.write("Model Prediction")                    
                     
                     
                     
@@ -105,8 +105,8 @@ def main():
 
     if option == "Image":    
         imageInput(deviceoption, datasrc)
-    elif option == "Video": 
-        videoInput(deviceoption, datasrc)
+#     elif option == "Video": 
+#         videoInput(deviceoption, datasrc)
 
 
 if __name__ == '__main__':
