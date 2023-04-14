@@ -9,6 +9,11 @@ import os
 import wget
 import time
 
+import zipfile
+archive = 'models/best.zip'
+with zipfile.ZipFile(archive, 'r') as zip_file:
+    zip_file.extractall(path="models")
+
 def imageInput(device, src):
     if src == 'Upload your own data.':
         image_file = st.file_uploader("Upload An Image", type=['png', 'jpeg', 'jpg'])
