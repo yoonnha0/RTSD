@@ -1,6 +1,7 @@
 import streamlit as st
 import torch
 import detect
+from detect import run
 from PIL import Image
 from io import *
 import glob
@@ -79,7 +80,7 @@ def videoInput(device, src):
         video_bytes = st_video.read()
         st.video(video_bytes)
         st.write("Uploaded Video")
-        detect(weights="models/best.pt", source=imgpath, device=0) if device == 'cuda' else detect(weights="models/best.pt", source=imgpath, device='cpu')
+        run(weights="models/best.pt", source=imgpath, device=0) if device == 'cuda' else run(weights="models/best.pt", source=imgpath, device='cpu')
         st_video2 = open(outputpath, 'rb')
         video_bytes2 = st_video2.read()
         st.video(video_bytes2)
