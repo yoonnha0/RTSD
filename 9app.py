@@ -103,7 +103,7 @@ def main():
     st.header('⛔Traffic road signs detection Model')
     st.subheader('⬅️Select the options')
 
-    if option == "Image":    
+#     if option == "Image":    
         imageInput(deviceoption, datasrc)
 #     elif option == "Video": 
 #         videoInput(deviceoption, datasrc)
