@@ -12,7 +12,7 @@ import time
 import zipfile
 archive = 'models/best.zip'
 with zipfile.ZipFile(archive, 'r') as zip_file:
-    zip_file.extractall(path="models")
+    zip_file.extractall()
 
 def imageInput(device, src):
     if src == 'Upload your own data.':
@@ -30,7 +30,7 @@ def imageInput(device, src):
 
             # call Model prediction--
            
-            model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/best.pt', force_reload=True)
+            model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt', force_reload=True)
             model.cuda() if device == 'cuda' else model.cpu()
             pred = model(imgpath)
             pred.render()  # render bbox in image
@@ -57,7 +57,7 @@ def imageInput(device, src):
         with col2:
             if image_file is not None and submit:
                 # call Model prediction--
-                model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/best.pt', force_reload=True)
+                model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt', force_reload=True)
                 pred = model(image_file)
                 pred.render()  # render bbox in image
                 for im in pred.ims:
@@ -83,7 +83,7 @@ def videoInput(device, src):
         video_bytes = st_video.read()
         st.video(video_bytes)
         st.write("Uploaded Video")
-        detect.run(weights="models/best.pt", source=imgpath, device=0) if device == 'cuda' else detect.run(weights="models/best.pt", source=imgpath, device='cpu')
+        detect.run(weights="best.pt", source=imgpath, device=0) if device == 'cuda' else detect.run(weights="best.pt", source=imgpath, device='cpu')
         st_video2 = open(outputpath, 'rb')
         video_bytes2 = st_video2.read()
         st.video(video_bytes2)
@@ -115,11 +115,11 @@ def main():
 if __name__ == '__main__':
                    main()
         
-@st.cache
-def loadModel():
-    start_dl = time.time()
-    model_file = wget.download('https://archive.org/download/best_20230412/best.pt', out="models/")
-    finished_dl = time.time()
-    print(f"Model Downloaded, ETA:{finished_dl-start_dl}")
-loadModel()
+# @st.cache
+# def loadModel():
+#     start_dl = time.time()
+#     model_file = wget.download('https://archive.org/download/best_20230412/best.pt', out="models/")
+#     finished_dl = time.time()
+#     print(f"Model Downloaded, ETA:{finished_dl-start_dl}")
+# loadModel()
     
