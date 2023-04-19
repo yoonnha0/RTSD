@@ -7,7 +7,7 @@ Original
 ![56](https://user-images.githubusercontent.com/106015877/232149851-d725de4e-1026-40d9-8d07-a2570e473660.jpg)
 
 YOLO5
-![56](https://user-images.githubusercontent.com/106015877/232149545-2d91e0e3-9d9e-4750-a055-1b2f560d2b25.jpg)
+![56](https://user-images.githubusercontent.com/106015877/233093224-81632731-f57f-474a-b4bc-ae327830a67d.jpg)
 
 My_model_Fast_R-CNN
 ![Снимок](https://user-images.githubusercontent.com/106015877/233064660-fde4ae8d-34aa-4be9-9e20-09c42e5c3240.PNG)
