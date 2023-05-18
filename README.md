@@ -9,13 +9,15 @@ Original
 YOLO5
 ![56](https://user-images.githubusercontent.com/106015877/233093449-6fce1979-a201-42b2-a738-2f86844a6ed2.jpg)
 
-
 My_model_Fast_R-CNN
 ![Снимок](https://user-images.githubusercontent.com/106015877/233064660-fde4ae8d-34aa-4be9-9e20-09c42e5c3240.PNG)
+
+![77](https://github.com/zakonreal/RTSD/assets/106015877/2c45190f-15d6-4d58-92e8-62bc5a555c4b)
 
 My_Video
 
 https://user-images.githubusercontent.com/106015877/233021197-ab358bc0-3f36-40f9-8724-56cb2044290a.mp4
+
 
 
 YOLO5_Video
