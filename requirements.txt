@@ -46,3 +46,4 @@ thop>=0.1.1  # FLOPs computation
 # roboflow
 wget
 opencv-python-headless<4.3
+opencv-python<4.10.0.84
